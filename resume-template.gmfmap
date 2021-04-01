@@ -62,6 +62,65 @@
     <ownedChild
         relatedDiagrams="//@diagram">
       <domainMetaElement
+          href="resume-template.ecore#//RepeatContainer"/>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping"
+          viewPattern="Repeat times: {0}"
+          editorPattern="Repeat times: {0}"
+          editPattern="Repeat times: {0}">
+        <diagramLabel
+            href="resume-template.gmfgraph#RepeatContainerLabel"/>
+        <features
+            href="resume-template.ecore#//RepeatContainer/repeatTimes"/>
+      </labelMappings>
+      <tool
+          xsi:type="gmftool:CreationTool"
+          href="resume-template.gmftool#//@palette/@tools.0/@tools.4"/>
+      <diagramNode
+          href="resume-template.gmfgraph#RepeatContainer"/>
+      <children
+          compartment="//@nodes.2/@ownedChild/@compartments.0"
+          referencedChild="//@nodes.0/@ownedChild">
+        <containmentFeature
+            href="resume-template.ecore#//RepeatContainer/elements"/>
+      </children>
+      <children
+          compartment="//@nodes.2/@ownedChild/@compartments.0"
+          referencedChild="//@nodes.1/@ownedChild">
+        <containmentFeature
+            href="resume-template.ecore#//RepeatContainer/elements"/>
+      </children>
+      <children
+          compartment="//@nodes.2/@ownedChild/@compartments.0"
+          referencedChild="//@nodes.2/@ownedChild">
+        <containmentFeature
+            href="resume-template.ecore#//RepeatContainer/elements"/>
+      </children>
+      <children
+          compartment="//@nodes.2/@ownedChild/@compartments.0"
+          referencedChild="//@nodes.3/@ownedChild">
+        <containmentFeature
+            href="resume-template.ecore#//RepeatContainer/elements"/>
+      </children>
+      <children
+          compartment="//@nodes.2/@ownedChild/@compartments.0"
+          referencedChild="//@nodes.4/@ownedChild">
+        <containmentFeature
+            href="resume-template.ecore#//RepeatContainer/elements"/>
+      </children>
+      <compartments
+          children="//@nodes.2/@ownedChild/@children.0 //@nodes.2/@ownedChild/@children.1 //@nodes.2/@ownedChild/@children.2 //@nodes.2/@ownedChild/@children.3 //@nodes.2/@ownedChild/@children.4">
+        <compartment
+            href="resume-template.gmfgraph#RepeatContainerElementsCompartment"/>
+      </compartments>
+    </ownedChild>
+  </nodes>
+  <nodes>
+    <containmentFeature
+        href="resume-template.ecore#//ResumeTemplate/elements"/>
+    <ownedChild
+        relatedDiagrams="//@diagram">
+      <domainMetaElement
           href="resume-template.ecore#//Table"/>
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping"
@@ -77,11 +136,11 @@
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="resume-template.gmftool#//@palette/@tools.0/@tools.4"/>
+          href="resume-template.gmftool#//@palette/@tools.0/@tools.5"/>
       <diagramNode
           href="resume-template.gmfgraph#Table"/>
       <children
-          compartment="//@nodes.2/@ownedChild/@compartments.0">
+          compartment="//@nodes.3/@ownedChild/@compartments.0">
         <containmentFeature
             href="resume-template.ecore#//Table/cells"/>
         <ownedChild
@@ -106,26 +165,26 @@
           <diagramNode
               href="resume-template.gmfgraph#Cell"/>
           <children
-              compartment="//@nodes.2/@ownedChild/@children.0/@ownedChild/@compartments.0"
+              compartment="//@nodes.3/@ownedChild/@children.0/@ownedChild/@compartments.0"
               referencedChild="//@nodes.0/@ownedChild">
             <containmentFeature
                 href="resume-template.ecore#//Cell/textElements"/>
           </children>
           <children
-              compartment="//@nodes.2/@ownedChild/@children.0/@ownedChild/@compartments.0"
+              compartment="//@nodes.3/@ownedChild/@children.0/@ownedChild/@compartments.0"
               referencedChild="//@nodes.1/@ownedChild">
             <containmentFeature
                 href="resume-template.ecore#//Cell/textElements"/>
           </children>
           <compartments
-              children="//@nodes.2/@ownedChild/@children.0/@ownedChild/@children.0 //@nodes.2/@ownedChild/@children.0/@ownedChild/@children.1">
+              children="//@nodes.3/@ownedChild/@children.0/@ownedChild/@children.0 //@nodes.3/@ownedChild/@children.0/@ownedChild/@children.1">
             <compartment
                 href="resume-template.gmfgraph#CellTextElementsCompartment"/>
           </compartments>
         </ownedChild>
       </children>
       <compartments
-          children="//@nodes.2/@ownedChild/@children.0">
+          children="//@nodes.3/@ownedChild/@children.0">
         <compartment
             href="resume-template.gmfgraph#TableCellsCompartment"/>
       </compartments>
@@ -172,7 +231,7 @@
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="resume-template.gmftool#//@palette/@tools.0/@tools.5"/>
+          href="resume-template.gmftool#//@palette/@tools.0/@tools.6"/>
       <diagramNode
           href="resume-template.gmfgraph#ThemeColor"/>
     </ownedChild>

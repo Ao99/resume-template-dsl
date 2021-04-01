@@ -80,6 +80,10 @@ public class Resume_templateAdapterFactory extends AdapterFactoryImpl {
 				return createElementAdapter();
 			}
 			@Override
+			public Adapter caseRepeatContainer(RepeatContainer object) {
+				return createRepeatContainerAdapter();
+			}
+			@Override
 			public Adapter caseTextElement(TextElement object) {
 				return createTextElementAdapter();
 			}
@@ -162,6 +166,20 @@ public class Resume_templateAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link resume_template.RepeatContainer <em>Repeat Container</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see resume_template.RepeatContainer
+	 * @generated
+	 */
+	public Adapter createRepeatContainerAdapter() {
 		return null;
 	}
 

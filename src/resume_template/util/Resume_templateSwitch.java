@@ -84,6 +84,13 @@ public class Resume_templateSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case Resume_templatePackage.REPEAT_CONTAINER: {
+				RepeatContainer repeatContainer = (RepeatContainer)theEObject;
+				T result = caseRepeatContainer(repeatContainer);
+				if (result == null) result = caseElement(repeatContainer);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case Resume_templatePackage.TEXT_ELEMENT: {
 				TextElement textElement = (TextElement)theEObject;
 				T result = caseTextElement(textElement);
@@ -173,6 +180,21 @@ public class Resume_templateSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseElement(Element object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Repeat Container</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Repeat Container</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRepeatContainer(RepeatContainer object) {
 		return null;
 	}
 

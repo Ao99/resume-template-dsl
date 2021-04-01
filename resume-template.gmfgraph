@@ -13,6 +13,19 @@
       </actualFigure>
       <accessors accessor="getFigureThemeColorLabelFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
     </descriptors>
+    <descriptors name="RepeatContainerFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="RepeatContainerFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="RepeatContainerLabelFigure" text="RepeatContainer">
+          <maximumSize dx="10000" dy="50"/>
+        </children>
+        <children xsi:type="gmfgraph:Rectangle" name="RepeatContainerElementsCompartmentFigure" outline="false"/>
+      </actualFigure>
+      <accessors accessor="getFigureRepeatContainerLabelFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
+      <accessors accessor="getRepeatContainerElementsCompartmentFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.1"/>
+    </descriptors>
     <descriptors name="ParagraphFigure">
       <actualFigure xsi:type="gmfgraph:ScalablePolygon" name="ParagraphFigure">
         <border xsi:type="gmfgraph:MarginBorder">
@@ -28,7 +41,7 @@
         <template x="100" y="40"/>
         <template y="40"/>
       </actualFigure>
-      <accessors accessor="getFigureParagraphLabelFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
+      <accessors accessor="getFigureParagraphLabelFigure" figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors name="ListFigure">
       <actualFigure xsi:type="gmfgraph:ScalablePolygon" name="ListFigure">
@@ -60,7 +73,7 @@
         <template x="3" y="18"/>
         <template y="15"/>
       </actualFigure>
-      <accessors accessor="getFigureListLabelFigure" figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
+      <accessors accessor="getFigureListLabelFigure" figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors name="TableFigure">
       <actualFigure xsi:type="gmfgraph:Rectangle" name="TableFigure">
@@ -72,8 +85,8 @@
         </children>
         <children xsi:type="gmfgraph:Rectangle" name="TableCellsCompartmentFigure" outline="false"/>
       </actualFigure>
-      <accessors accessor="getFigureTableLabelFigure" figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
-      <accessors accessor="getTableCellsCompartmentFigure" figure="//@figures.0/@descriptors.3/@actualFigure/@children.1"/>
+      <accessors accessor="getFigureTableLabelFigure" figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
+      <accessors accessor="getTableCellsCompartmentFigure" figure="//@figures.0/@descriptors.4/@actualFigure/@children.1"/>
     </descriptors>
     <descriptors name="CellFigure">
       <actualFigure xsi:type="gmfgraph:Rectangle" name="CellFigure">
@@ -85,8 +98,8 @@
         </children>
         <children xsi:type="gmfgraph:Rectangle" name="CellTextElementsCompartmentFigure" outline="false"/>
       </actualFigure>
-      <accessors accessor="getFigureCellLabelFigure" figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
-      <accessors accessor="getCellTextElementsCompartmentFigure" figure="//@figures.0/@descriptors.4/@actualFigure/@children.1"/>
+      <accessors accessor="getFigureCellLabelFigure" figure="//@figures.0/@descriptors.5/@actualFigure/@children.0"/>
+      <accessors accessor="getCellTextElementsCompartmentFigure" figure="//@figures.0/@descriptors.5/@actualFigure/@children.1"/>
     </descriptors>
     <descriptors name="HorizontalLineFigure">
       <actualFigure xsi:type="gmfgraph:ScalablePolygon" name="HorizontalLineFigure">
@@ -98,7 +111,7 @@
         <template/>
         <template x="500"/>
       </actualFigure>
-      <accessors accessor="getFigureHorizontalLineLabelFigure" figure="//@figures.0/@descriptors.5/@actualFigure/@children.0"/>
+      <accessors accessor="getFigureHorizontalLineLabelFigure" figure="//@figures.0/@descriptors.6/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors name="TextElementColorFigure">
       <actualFigure xsi:type="gmfgraph:PolylineConnection" name="TextElementColorFigure" lineKind="LINE_DASH" targetDecoration="//@figures.0/@figures.0"/>
@@ -118,6 +131,7 @@
       <defaultSize dx="150" dy="30"/>
     </facets>
   </nodes>
+  <nodes name="RepeatContainer" figure="RepeatContainerFigure"/>
   <nodes name="Paragraph" figure="ParagraphFigure"/>
   <nodes name="List" figure="ListFigure"/>
   <nodes name="Table" figure="TableFigure"/>
@@ -129,14 +143,16 @@
   </nodes>
   <connections name="TextElementColor" figure="TextElementColorFigure"/>
   <connections name="TableBgColor" figure="TableBgColorFigure"/>
-  <compartments name="TableCellsCompartment" figure="TableFigure" collapsible="true" accessor="//@figures.0/@descriptors.3/@accessors.1"/>
-  <compartments name="CellTextElementsCompartment" figure="CellFigure" collapsible="true" accessor="//@figures.0/@descriptors.4/@accessors.1"/>
+  <compartments name="RepeatContainerElementsCompartment" figure="RepeatContainerFigure" collapsible="true" accessor="//@figures.0/@descriptors.1/@accessors.1"/>
+  <compartments name="TableCellsCompartment" figure="TableFigure" collapsible="true" accessor="//@figures.0/@descriptors.4/@accessors.1"/>
+  <compartments name="CellTextElementsCompartment" figure="CellFigure" collapsible="true" accessor="//@figures.0/@descriptors.5/@accessors.1"/>
   <labels name="ThemeColorLabel" figure="ThemeColorFigure" accessor="//@figures.0/@descriptors.0/@accessors.0"/>
-  <labels name="ParagraphLabel" figure="ParagraphFigure" accessor="//@figures.0/@descriptors.1/@accessors.0"/>
-  <labels name="ListLabel" figure="ListFigure" accessor="//@figures.0/@descriptors.2/@accessors.0"/>
-  <labels name="TableLabel" figure="TableFigure" accessor="//@figures.0/@descriptors.3/@accessors.0"/>
-  <labels name="CellLabel" figure="CellFigure" accessor="//@figures.0/@descriptors.4/@accessors.0"/>
-  <labels name="HorizontalLineLabel" figure="HorizontalLineFigure" accessor="//@figures.0/@descriptors.5/@accessors.0"/>
+  <labels name="RepeatContainerLabel" figure="RepeatContainerFigure" accessor="//@figures.0/@descriptors.1/@accessors.0"/>
+  <labels name="ParagraphLabel" figure="ParagraphFigure" accessor="//@figures.0/@descriptors.2/@accessors.0"/>
+  <labels name="ListLabel" figure="ListFigure" accessor="//@figures.0/@descriptors.3/@accessors.0"/>
+  <labels name="TableLabel" figure="TableFigure" accessor="//@figures.0/@descriptors.4/@accessors.0"/>
+  <labels name="CellLabel" figure="CellFigure" accessor="//@figures.0/@descriptors.5/@accessors.0"/>
+  <labels name="HorizontalLineLabel" figure="HorizontalLineFigure" accessor="//@figures.0/@descriptors.6/@accessors.0"/>
   <labels name="TextElementColorExternalLabel" figure="TextElementColorExternalLabelFigure" elementIcon="false"/>
   <labels name="TableBgColorExternalLabel" figure="TableBgColorExternalLabelFigure" elementIcon="false"/>
 </gmfgraph:Canvas>

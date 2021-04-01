@@ -204,6 +204,52 @@ public interface Resume_templatePackage extends EPackage {
 	int ELEMENT_FEATURE_COUNT = 1;
 
 	/**
+	 * The meta object id for the '{@link resume_template.impl.RepeatContainerImpl <em>Repeat Container</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see resume_template.impl.RepeatContainerImpl
+	 * @see resume_template.impl.Resume_templatePackageImpl#getRepeatContainer()
+	 * @generated
+	 */
+	int REPEAT_CONTAINER = 3;
+
+	/**
+	 * The feature id for the '<em><b>Element Idx</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REPEAT_CONTAINER__ELEMENT_IDX = ELEMENT__ELEMENT_IDX;
+
+	/**
+	 * The feature id for the '<em><b>Repeat Times</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REPEAT_CONTAINER__REPEAT_TIMES = ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REPEAT_CONTAINER__ELEMENTS = ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Repeat Container</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REPEAT_CONTAINER_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 2;
+
+	/**
 	 * The meta object id for the '{@link resume_template.impl.TextElementImpl <em>Text Element</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -211,7 +257,7 @@ public interface Resume_templatePackage extends EPackage {
 	 * @see resume_template.impl.Resume_templatePackageImpl#getTextElement()
 	 * @generated
 	 */
-	int TEXT_ELEMENT = 3;
+	int TEXT_ELEMENT = 4;
 
 	/**
 	 * The feature id for the '<em><b>Element Idx</b></em>' attribute.
@@ -320,7 +366,7 @@ public interface Resume_templatePackage extends EPackage {
 	 * @see resume_template.impl.Resume_templatePackageImpl#getParagraph()
 	 * @generated
 	 */
-	int PARAGRAPH = 4;
+	int PARAGRAPH = 5;
 
 	/**
 	 * The feature id for the '<em><b>Element Idx</b></em>' attribute.
@@ -438,7 +484,7 @@ public interface Resume_templatePackage extends EPackage {
 	 * @see resume_template.impl.Resume_templatePackageImpl#getList()
 	 * @generated
 	 */
-	int LIST = 5;
+	int LIST = 6;
 
 	/**
 	 * The feature id for the '<em><b>Element Idx</b></em>' attribute.
@@ -583,7 +629,7 @@ public interface Resume_templatePackage extends EPackage {
 	 * @see resume_template.impl.Resume_templatePackageImpl#getTable()
 	 * @generated
 	 */
-	int TABLE = 6;
+	int TABLE = 7;
 
 	/**
 	 * The feature id for the '<em><b>Element Idx</b></em>' attribute.
@@ -674,7 +720,7 @@ public interface Resume_templatePackage extends EPackage {
 	 * @see resume_template.impl.Resume_templatePackageImpl#getCell()
 	 * @generated
 	 */
-	int CELL = 7;
+	int CELL = 8;
 
 	/**
 	 * The feature id for the '<em><b>Row Idx</b></em>' attribute.
@@ -720,7 +766,7 @@ public interface Resume_templatePackage extends EPackage {
 	 * @see resume_template.impl.Resume_templatePackageImpl#getHorizontalLine()
 	 * @generated
 	 */
-	int HORIZONTAL_LINE = 8;
+	int HORIZONTAL_LINE = 9;
 
 	/**
 	 * The feature id for the '<em><b>Element Idx</b></em>' attribute.
@@ -757,7 +803,7 @@ public interface Resume_templatePackage extends EPackage {
 	 * @see resume_template.impl.Resume_templatePackageImpl#getHAlignment()
 	 * @generated
 	 */
-	int HALIGNMENT = 9;
+	int HALIGNMENT = 10;
 
 	/**
 	 * The meta object id for the '{@link resume_template.GlyphType <em>Glyph Type</em>}' enum.
@@ -767,7 +813,7 @@ public interface Resume_templatePackage extends EPackage {
 	 * @see resume_template.impl.Resume_templatePackageImpl#getGlyphType()
 	 * @generated
 	 */
-	int GLYPH_TYPE = 10;
+	int GLYPH_TYPE = 11;
 
 
 	/**
@@ -909,6 +955,38 @@ public interface Resume_templatePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getElement_ElementIdx();
+
+	/**
+	 * Returns the meta object for class '{@link resume_template.RepeatContainer <em>Repeat Container</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Repeat Container</em>'.
+	 * @see resume_template.RepeatContainer
+	 * @generated
+	 */
+	EClass getRepeatContainer();
+
+	/**
+	 * Returns the meta object for the attribute '{@link resume_template.RepeatContainer#getRepeatTimes <em>Repeat Times</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Repeat Times</em>'.
+	 * @see resume_template.RepeatContainer#getRepeatTimes()
+	 * @see #getRepeatContainer()
+	 * @generated
+	 */
+	EAttribute getRepeatContainer_RepeatTimes();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link resume_template.RepeatContainer#getElements <em>Elements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Elements</em>'.
+	 * @see resume_template.RepeatContainer#getElements()
+	 * @see #getRepeatContainer()
+	 * @generated
+	 */
+	EReference getRepeatContainer_Elements();
 
 	/**
 	 * Returns the meta object for class '{@link resume_template.TextElement <em>Text Element</em>}'.
@@ -1396,6 +1474,32 @@ public interface Resume_templatePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ELEMENT__ELEMENT_IDX = eINSTANCE.getElement_ElementIdx();
+
+		/**
+		 * The meta object literal for the '{@link resume_template.impl.RepeatContainerImpl <em>Repeat Container</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see resume_template.impl.RepeatContainerImpl
+		 * @see resume_template.impl.Resume_templatePackageImpl#getRepeatContainer()
+		 * @generated
+		 */
+		EClass REPEAT_CONTAINER = eINSTANCE.getRepeatContainer();
+
+		/**
+		 * The meta object literal for the '<em><b>Repeat Times</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REPEAT_CONTAINER__REPEAT_TIMES = eINSTANCE.getRepeatContainer_RepeatTimes();
+
+		/**
+		 * The meta object literal for the '<em><b>Elements</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REPEAT_CONTAINER__ELEMENTS = eINSTANCE.getRepeatContainer_Elements();
 
 		/**
 		 * The meta object literal for the '{@link resume_template.impl.TextElementImpl <em>Text Element</em>}' class.

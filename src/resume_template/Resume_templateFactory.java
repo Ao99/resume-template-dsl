@@ -40,6 +40,15 @@ public interface Resume_templateFactory extends EFactory {
 	ThemeColor createThemeColor();
 
 	/**
+	 * Returns a new object of class '<em>Repeat Container</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Repeat Container</em>'.
+	 * @generated
+	 */
+	RepeatContainer createRepeatContainer();
+
+	/**
 	 * Returns a new object of class '<em>Paragraph</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

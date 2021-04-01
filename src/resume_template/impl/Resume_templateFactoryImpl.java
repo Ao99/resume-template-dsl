@@ -59,6 +59,7 @@ public class Resume_templateFactoryImpl extends EFactoryImpl implements Resume_t
 		switch (eClass.getClassifierID()) {
 			case Resume_templatePackage.RESUME_TEMPLATE: return createResumeTemplate();
 			case Resume_templatePackage.THEME_COLOR: return createThemeColor();
+			case Resume_templatePackage.REPEAT_CONTAINER: return createRepeatContainer();
 			case Resume_templatePackage.PARAGRAPH: return createParagraph();
 			case Resume_templatePackage.LIST: return createList();
 			case Resume_templatePackage.TABLE: return createTable();
@@ -123,6 +124,17 @@ public class Resume_templateFactoryImpl extends EFactoryImpl implements Resume_t
 	public ThemeColor createThemeColor() {
 		ThemeColorImpl themeColor = new ThemeColorImpl();
 		return themeColor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public RepeatContainer createRepeatContainer() {
+		RepeatContainerImpl repeatContainer = new RepeatContainerImpl();
+		return repeatContainer;
 	}
 
 	/**
