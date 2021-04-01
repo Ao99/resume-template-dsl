@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="ASCII"?>
-<resume_template:ResumeTemplate xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:resume_template="resume_template" xmi:id="_NZTyMJJDEeuIVP731uHvmg">
-  <themeColors xmi:id="_Ohlo4JJDEeuIVP731uHvmg" colorCode="#FFFFFFS"/>
-  <themeColors xmi:id="_PKsQQJJDEeuIVP731uHvmg"/>
-  <elements xsi:type="resume_template:Paragraph" xmi:id="_Nae9QJJLEeuIVP731uHvmg"/>
-  <elements xsi:type="resume_template:List" xmi:id="_TqoPYJJ8EeuIVP731uHvmg"/>
-  <elements xsi:type="resume_template:Table" xmi:id="_t7CtIJJFEeuIVP731uHvmg" elementIdx="1" widthPropCols="1,2,3,">
-    <cells xmi:id="_2ckL0JJREeuIVP731uHvmg" colIdx="2">
-      <textElements xsi:type="resume_template:List" xmi:id="_Oby6MJJUEeuIVP731uHvmg"/>
-      <textElements xsi:type="resume_template:Paragraph" xmi:id="_Oy2vUJJUEeuIVP731uHvmg"/>
-    </cells>
-    <cells xmi:id="_2wf0cJJREeuIVP731uHvmg"/>
+<resume_template:ResumeTemplate xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:resume_template="resume_template" xmi:id="_ouIBoJMcEeuBMf1g2_1Zig">
+  <themeColors xmi:id="_rsB9MJMcEeuBMf1g2_1Zig"/>
+  <themeColors xmi:id="_sFHyoJMcEeuBMf1g2_1Zig"/>
+  <elements xsi:type="resume_template:Paragraph" xmi:id="_slvMYJMcEeuBMf1g2_1Zig"/>
+  <elements xsi:type="resume_template:List" xmi:id="_1gb2gJMcEeuBMf1g2_1Zig"/>
+  <elements xsi:type="resume_template:Table" xmi:id="_3CgGMJMcEeuBMf1g2_1Zig">
+    <cells xmi:id="_3u214JMcEeuBMf1g2_1Zig"/>
+    <cells xmi:id="_4HQHwJMcEeuBMf1g2_1Zig"/>
   </elements>
-  <elements xsi:type="resume_template:Table" xmi:id="_SUCGIJJLEeuIVP731uHvmg" elementIdx="2" numRows="2" numCols="1" widthPropCols="01,2">
-    <cells xmi:id="_1eBf8JJREeuIVP731uHvmg"/>
-    <cells xmi:id="_2FBOgJJREeuIVP731uHvmg"/>
-  </elements>
-  <elements xsi:type="resume_template:List" xmi:id="_zDkEUJKAEeuIVP731uHvmg" elementIdx="2"/>
+  <elements xsi:type="resume_template:HorizontalLine" xmi:id="_4sLZwJMcEeuBMf1g2_1Zig"/>
 </resume_template:ResumeTemplate>

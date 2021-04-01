@@ -2,7 +2,7 @@
 <resume_template:ResumeTemplate xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:resume_template="resume_template">
   <themeColors name="themeColor1" colorCode="#4a99d5"/>
   <themeColors name="themeColor2"/>
-  <elements xsi:type="resume_template:Paragraph" text="my name" font="" size="23.0" isUppercase="true" isBold="true" hAlignment="CENTER" color="//@themeColors.0"/>
+  <elements xsi:type="resume_template:Paragraph" text="my name" font="" fontSize="23.0" isUppercase="true" isBold="true" hAlignment="CENTER" color="//@themeColors.0"/>
   <elements xsi:type="resume_template:Table" elementIdx="1" numRows="1" numCols="3" widthPropCols="3,1,1,1" bgColor="//@themeColors.0">
     <cells>
       <textElements xsi:type="resume_template:Paragraph" text="www.my-web-site.com" font="Georgia" color="//@themeColors.1"/>
@@ -15,8 +15,8 @@
     </cells>
   </elements>
   <elements xsi:type="resume_template:HorizontalLine" elementIdx="2"/>
-  <elements xsi:type="resume_template:Paragraph" elementIdx="3" text="highlights" size="12.5" isUppercase="true" isBold="true" color="//@themeColors.0"/>
+  <elements xsi:type="resume_template:Paragraph" elementIdx="3" text="highlights" fontSize="12.5" isUppercase="true" isBold="true" color="//@themeColors.0"/>
   <elements xsi:type="resume_template:List" elementIdx="4" numItems="4" minLength="5" maxLength="12" glyphType="SQUARE_BULLET"/>
   <elements xsi:type="resume_template:HorizontalLine" elementIdx="5"/>
-  <elements xsi:type="resume_template:Paragraph" elementIdx="5" text="education" size="12.5" isUppercase="true" isBold="true" color="//@themeColors.0"/>
+  <elements xsi:type="resume_template:Paragraph" elementIdx="5" text="education" fontSize="12.5" isUppercase="true" isBold="true" color="//@themeColors.0"/>
 </resume_template:ResumeTemplate>
