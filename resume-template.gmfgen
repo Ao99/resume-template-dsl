@@ -128,11 +128,11 @@
         <containmentMetaFeature href="resume-template.genmodel#//resume_template/ResumeTemplate/elements"/>
         <childMetaFeature href="resume-template.genmodel#//resume_template/ResumeTemplate/elements"/>
       </modelFacet>
-      <labels visualID="5004" editPartClassName="HorizontalLineSizeEditPart" itemSemanticEditPolicyClassName="HorizontalLineSizeItemSemanticEditPolicy" elementIcon="true">
+      <labels visualID="5004" editPartClassName="HorizontalLineFontSizeEditPart" itemSemanticEditPolicyClassName="HorizontalLineFontSizeItemSemanticEditPolicy" elementIcon="true">
         <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureHorizontalLineLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
         <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0" viewPattern="HorizontalLine size: {0}" editorPattern="HorizontalLine size: {0}" editPattern="HorizontalLine size: {0}">
-          <metaFeatures href="resume-template.genmodel#//resume_template/HorizontalLine/size"/>
+          <metaFeatures href="resume-template.genmodel#//resume_template/HorizontalLine/fontSize"/>
         </modelFacet>
       </labels>
     </topLevelNodes>

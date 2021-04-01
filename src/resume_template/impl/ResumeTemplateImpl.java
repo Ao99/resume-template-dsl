@@ -34,7 +34,7 @@ import resume_template.ThemeColor;
  *   <li>{@link resume_template.impl.ResumeTemplateImpl#getFolderName <em>Folder Name</em>}</li>
  *   <li>{@link resume_template.impl.ResumeTemplateImpl#getFileName <em>File Name</em>}</li>
  *   <li>{@link resume_template.impl.ResumeTemplateImpl#getDefaultFont <em>Default Font</em>}</li>
- *   <li>{@link resume_template.impl.ResumeTemplateImpl#getDefaultSize <em>Default Size</em>}</li>
+ *   <li>{@link resume_template.impl.ResumeTemplateImpl#getDefaultFontSize <em>Default Font Size</em>}</li>
  *   <li>{@link resume_template.impl.ResumeTemplateImpl#getDefaultTablePadding <em>Default Table Padding</em>}</li>
  *   <li>{@link resume_template.impl.ResumeTemplateImpl#getThemeColors <em>Theme Colors</em>}</li>
  *   <li>{@link resume_template.impl.ResumeTemplateImpl#getElements <em>Elements</em>}</li>
@@ -104,24 +104,24 @@ public class ResumeTemplateImpl extends EObjectImpl implements ResumeTemplate {
 	protected String defaultFont = DEFAULT_FONT_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getDefaultSize() <em>Default Size</em>}' attribute.
+	 * The default value of the '{@link #getDefaultFontSize() <em>Default Font Size</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDefaultSize()
+	 * @see #getDefaultFontSize()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double DEFAULT_SIZE_EDEFAULT = 11.0;
+	protected static final double DEFAULT_FONT_SIZE_EDEFAULT = 11.0;
 
 	/**
-	 * The cached value of the '{@link #getDefaultSize() <em>Default Size</em>}' attribute.
+	 * The cached value of the '{@link #getDefaultFontSize() <em>Default Font Size</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDefaultSize()
+	 * @see #getDefaultFontSize()
 	 * @generated
 	 * @ordered
 	 */
-	protected double defaultSize = DEFAULT_SIZE_EDEFAULT;
+	protected double defaultFontSize = DEFAULT_FONT_SIZE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDefaultTablePadding() <em>Default Table Padding</em>}' attribute.
@@ -257,8 +257,8 @@ public class ResumeTemplateImpl extends EObjectImpl implements ResumeTemplate {
 	 * @generated
 	 */
 	@Override
-	public double getDefaultSize() {
-		return defaultSize;
+	public double getDefaultFontSize() {
+		return defaultFontSize;
 	}
 
 	/**
@@ -267,11 +267,11 @@ public class ResumeTemplateImpl extends EObjectImpl implements ResumeTemplate {
 	 * @generated
 	 */
 	@Override
-	public void setDefaultSize(double newDefaultSize) {
-		double oldDefaultSize = defaultSize;
-		defaultSize = newDefaultSize;
+	public void setDefaultFontSize(double newDefaultFontSize) {
+		double oldDefaultFontSize = defaultFontSize;
+		defaultFontSize = newDefaultFontSize;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Resume_templatePackage.RESUME_TEMPLATE__DEFAULT_SIZE, oldDefaultSize, defaultSize));
+			eNotify(new ENotificationImpl(this, Notification.SET, Resume_templatePackage.RESUME_TEMPLATE__DEFAULT_FONT_SIZE, oldDefaultFontSize, defaultFontSize));
 	}
 
 	/**
@@ -353,8 +353,8 @@ public class ResumeTemplateImpl extends EObjectImpl implements ResumeTemplate {
 				return getFileName();
 			case Resume_templatePackage.RESUME_TEMPLATE__DEFAULT_FONT:
 				return getDefaultFont();
-			case Resume_templatePackage.RESUME_TEMPLATE__DEFAULT_SIZE:
-				return getDefaultSize();
+			case Resume_templatePackage.RESUME_TEMPLATE__DEFAULT_FONT_SIZE:
+				return getDefaultFontSize();
 			case Resume_templatePackage.RESUME_TEMPLATE__DEFAULT_TABLE_PADDING:
 				return getDefaultTablePadding();
 			case Resume_templatePackage.RESUME_TEMPLATE__THEME_COLORS:
@@ -383,8 +383,8 @@ public class ResumeTemplateImpl extends EObjectImpl implements ResumeTemplate {
 			case Resume_templatePackage.RESUME_TEMPLATE__DEFAULT_FONT:
 				setDefaultFont((String)newValue);
 				return;
-			case Resume_templatePackage.RESUME_TEMPLATE__DEFAULT_SIZE:
-				setDefaultSize((Double)newValue);
+			case Resume_templatePackage.RESUME_TEMPLATE__DEFAULT_FONT_SIZE:
+				setDefaultFontSize((Double)newValue);
 				return;
 			case Resume_templatePackage.RESUME_TEMPLATE__DEFAULT_TABLE_PADDING:
 				setDefaultTablePadding((Integer)newValue);
@@ -418,8 +418,8 @@ public class ResumeTemplateImpl extends EObjectImpl implements ResumeTemplate {
 			case Resume_templatePackage.RESUME_TEMPLATE__DEFAULT_FONT:
 				setDefaultFont(DEFAULT_FONT_EDEFAULT);
 				return;
-			case Resume_templatePackage.RESUME_TEMPLATE__DEFAULT_SIZE:
-				setDefaultSize(DEFAULT_SIZE_EDEFAULT);
+			case Resume_templatePackage.RESUME_TEMPLATE__DEFAULT_FONT_SIZE:
+				setDefaultFontSize(DEFAULT_FONT_SIZE_EDEFAULT);
 				return;
 			case Resume_templatePackage.RESUME_TEMPLATE__DEFAULT_TABLE_PADDING:
 				setDefaultTablePadding(DEFAULT_TABLE_PADDING_EDEFAULT);
@@ -448,8 +448,8 @@ public class ResumeTemplateImpl extends EObjectImpl implements ResumeTemplate {
 				return FILE_NAME_EDEFAULT == null ? fileName != null : !FILE_NAME_EDEFAULT.equals(fileName);
 			case Resume_templatePackage.RESUME_TEMPLATE__DEFAULT_FONT:
 				return DEFAULT_FONT_EDEFAULT == null ? defaultFont != null : !DEFAULT_FONT_EDEFAULT.equals(defaultFont);
-			case Resume_templatePackage.RESUME_TEMPLATE__DEFAULT_SIZE:
-				return defaultSize != DEFAULT_SIZE_EDEFAULT;
+			case Resume_templatePackage.RESUME_TEMPLATE__DEFAULT_FONT_SIZE:
+				return defaultFontSize != DEFAULT_FONT_SIZE_EDEFAULT;
 			case Resume_templatePackage.RESUME_TEMPLATE__DEFAULT_TABLE_PADDING:
 				return defaultTablePadding != DEFAULT_TABLE_PADDING_EDEFAULT;
 			case Resume_templatePackage.RESUME_TEMPLATE__THEME_COLORS:
@@ -476,8 +476,8 @@ public class ResumeTemplateImpl extends EObjectImpl implements ResumeTemplate {
 		result.append(fileName);
 		result.append(", defaultFont: ");
 		result.append(defaultFont);
-		result.append(", defaultSize: ");
-		result.append(defaultSize);
+		result.append(", defaultFontSize: ");
+		result.append(defaultFontSize);
 		result.append(", defaultTablePadding: ");
 		result.append(defaultTablePadding);
 		result.append(')');

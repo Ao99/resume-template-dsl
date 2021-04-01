@@ -94,13 +94,13 @@ public interface Resume_templatePackage extends EPackage {
 	int RESUME_TEMPLATE__DEFAULT_FONT = 2;
 
 	/**
-	 * The feature id for the '<em><b>Default Size</b></em>' attribute.
+	 * The feature id for the '<em><b>Default Font Size</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESUME_TEMPLATE__DEFAULT_SIZE = 3;
+	int RESUME_TEMPLATE__DEFAULT_FONT_SIZE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Default Table Padding</b></em>' attribute.
@@ -250,13 +250,13 @@ public interface Resume_templatePackage extends EPackage {
 	int TEXT_ELEMENT__FONT = ELEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Size</b></em>' attribute.
+	 * The feature id for the '<em><b>Font Size</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_ELEMENT__SIZE = ELEMENT_FEATURE_COUNT + 3;
+	int TEXT_ELEMENT__FONT_SIZE = ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Is Uppercase</b></em>' attribute.
@@ -359,13 +359,13 @@ public interface Resume_templatePackage extends EPackage {
 	int PARAGRAPH__FONT = TEXT_ELEMENT__FONT;
 
 	/**
-	 * The feature id for the '<em><b>Size</b></em>' attribute.
+	 * The feature id for the '<em><b>Font Size</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PARAGRAPH__SIZE = TEXT_ELEMENT__SIZE;
+	int PARAGRAPH__FONT_SIZE = TEXT_ELEMENT__FONT_SIZE;
 
 	/**
 	 * The feature id for the '<em><b>Is Uppercase</b></em>' attribute.
@@ -477,13 +477,13 @@ public interface Resume_templatePackage extends EPackage {
 	int LIST__FONT = TEXT_ELEMENT__FONT;
 
 	/**
-	 * The feature id for the '<em><b>Size</b></em>' attribute.
+	 * The feature id for the '<em><b>Font Size</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LIST__SIZE = TEXT_ELEMENT__SIZE;
+	int LIST__FONT_SIZE = TEXT_ELEMENT__FONT_SIZE;
 
 	/**
 	 * The feature id for the '<em><b>Is Uppercase</b></em>' attribute.
@@ -732,13 +732,13 @@ public interface Resume_templatePackage extends EPackage {
 	int HORIZONTAL_LINE__ELEMENT_IDX = ELEMENT__ELEMENT_IDX;
 
 	/**
-	 * The feature id for the '<em><b>Size</b></em>' attribute.
+	 * The feature id for the '<em><b>Font Size</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HORIZONTAL_LINE__SIZE = ELEMENT_FEATURE_COUNT + 0;
+	int HORIZONTAL_LINE__FONT_SIZE = ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Horizontal Line</em>' class.
@@ -814,15 +814,15 @@ public interface Resume_templatePackage extends EPackage {
 	EAttribute getResumeTemplate_DefaultFont();
 
 	/**
-	 * Returns the meta object for the attribute '{@link resume_template.ResumeTemplate#getDefaultSize <em>Default Size</em>}'.
+	 * Returns the meta object for the attribute '{@link resume_template.ResumeTemplate#getDefaultFontSize <em>Default Font Size</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Size</em>'.
-	 * @see resume_template.ResumeTemplate#getDefaultSize()
+	 * @return the meta object for the attribute '<em>Default Font Size</em>'.
+	 * @see resume_template.ResumeTemplate#getDefaultFontSize()
 	 * @see #getResumeTemplate()
 	 * @generated
 	 */
-	EAttribute getResumeTemplate_DefaultSize();
+	EAttribute getResumeTemplate_DefaultFontSize();
 
 	/**
 	 * Returns the meta object for the attribute '{@link resume_template.ResumeTemplate#getDefaultTablePadding <em>Default Table Padding</em>}'.
@@ -954,15 +954,15 @@ public interface Resume_templatePackage extends EPackage {
 	EAttribute getTextElement_Font();
 
 	/**
-	 * Returns the meta object for the attribute '{@link resume_template.TextElement#getSize <em>Size</em>}'.
+	 * Returns the meta object for the attribute '{@link resume_template.TextElement#getFontSize <em>Font Size</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Size</em>'.
-	 * @see resume_template.TextElement#getSize()
+	 * @return the meta object for the attribute '<em>Font Size</em>'.
+	 * @see resume_template.TextElement#getFontSize()
 	 * @see #getTextElement()
 	 * @generated
 	 */
-	EAttribute getTextElement_Size();
+	EAttribute getTextElement_FontSize();
 
 	/**
 	 * Returns the meta object for the attribute '{@link resume_template.TextElement#isIsUppercase <em>Is Uppercase</em>}'.
@@ -1235,15 +1235,15 @@ public interface Resume_templatePackage extends EPackage {
 	EClass getHorizontalLine();
 
 	/**
-	 * Returns the meta object for the attribute '{@link resume_template.HorizontalLine#getSize <em>Size</em>}'.
+	 * Returns the meta object for the attribute '{@link resume_template.HorizontalLine#getFontSize <em>Font Size</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Size</em>'.
-	 * @see resume_template.HorizontalLine#getSize()
+	 * @return the meta object for the attribute '<em>Font Size</em>'.
+	 * @see resume_template.HorizontalLine#getFontSize()
 	 * @see #getHorizontalLine()
 	 * @generated
 	 */
-	EAttribute getHorizontalLine_Size();
+	EAttribute getHorizontalLine_FontSize();
 
 	/**
 	 * Returns the meta object for enum '{@link resume_template.HAlignment <em>HAlignment</em>}'.
@@ -1322,12 +1322,12 @@ public interface Resume_templatePackage extends EPackage {
 		EAttribute RESUME_TEMPLATE__DEFAULT_FONT = eINSTANCE.getResumeTemplate_DefaultFont();
 
 		/**
-		 * The meta object literal for the '<em><b>Default Size</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Default Font Size</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RESUME_TEMPLATE__DEFAULT_SIZE = eINSTANCE.getResumeTemplate_DefaultSize();
+		EAttribute RESUME_TEMPLATE__DEFAULT_FONT_SIZE = eINSTANCE.getResumeTemplate_DefaultFontSize();
 
 		/**
 		 * The meta object literal for the '<em><b>Default Table Padding</b></em>' attribute feature.
@@ -1432,12 +1432,12 @@ public interface Resume_templatePackage extends EPackage {
 		EAttribute TEXT_ELEMENT__FONT = eINSTANCE.getTextElement_Font();
 
 		/**
-		 * The meta object literal for the '<em><b>Size</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Font Size</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TEXT_ELEMENT__SIZE = eINSTANCE.getTextElement_Size();
+		EAttribute TEXT_ELEMENT__FONT_SIZE = eINSTANCE.getTextElement_FontSize();
 
 		/**
 		 * The meta object literal for the '<em><b>Is Uppercase</b></em>' attribute feature.
@@ -1650,12 +1650,12 @@ public interface Resume_templatePackage extends EPackage {
 		EClass HORIZONTAL_LINE = eINSTANCE.getHorizontalLine();
 
 		/**
-		 * The meta object literal for the '<em><b>Size</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Font Size</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute HORIZONTAL_LINE__SIZE = eINSTANCE.getHorizontalLine_Size();
+		EAttribute HORIZONTAL_LINE__FONT_SIZE = eINSTANCE.getHorizontalLine_FontSize();
 
 		/**
 		 * The meta object literal for the '{@link resume_template.HAlignment <em>HAlignment</em>}' enum.

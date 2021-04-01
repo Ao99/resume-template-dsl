@@ -145,7 +145,7 @@
         <diagramLabel
             href="resume-template.gmfgraph#HorizontalLineLabel"/>
         <features
-            href="resume-template.ecore#//HorizontalLine/size"/>
+            href="resume-template.ecore#//HorizontalLine/fontSize"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"

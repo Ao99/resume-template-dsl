@@ -14,7 +14,7 @@
         defaultValueLiteral="Resume Template"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultFont" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="Arial"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultSize" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultFontSize" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
         defaultValueLiteral="11"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultTablePadding" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="0"/>
@@ -51,7 +51,7 @@
         defaultValueLiteral="0"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="font" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fontSize" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isUppercase" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isBold" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
@@ -156,7 +156,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="HorizontalLine" eSuperTypes="#//Element">
     <eAnnotations source="gmf.node">
-      <details key="label" value="size"/>
+      <details key="label" value="fontSize"/>
       <details key="label.pattern" value="HorizontalLine size: {0}"/>
       <details key="figure" value="polygon"/>
       <details key="size" value="700,5"/>
@@ -167,7 +167,7 @@
       <details key="label" value="return 'HorizontalLine size: ' + self.size;"/>
       <details key="classIcon" value="transition"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fontSize" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
         defaultValueLiteral="5"/>
   </eClassifiers>
 </ecore:EPackage>

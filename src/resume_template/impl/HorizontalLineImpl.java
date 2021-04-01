@@ -19,31 +19,31 @@ import resume_template.Resume_templatePackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link resume_template.impl.HorizontalLineImpl#getSize <em>Size</em>}</li>
+ *   <li>{@link resume_template.impl.HorizontalLineImpl#getFontSize <em>Font Size</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class HorizontalLineImpl extends ElementImpl implements HorizontalLine {
 	/**
-	 * The default value of the '{@link #getSize() <em>Size</em>}' attribute.
+	 * The default value of the '{@link #getFontSize() <em>Font Size</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSize()
+	 * @see #getFontSize()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double SIZE_EDEFAULT = 5.0;
+	protected static final double FONT_SIZE_EDEFAULT = 5.0;
 
 	/**
-	 * The cached value of the '{@link #getSize() <em>Size</em>}' attribute.
+	 * The cached value of the '{@link #getFontSize() <em>Font Size</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSize()
+	 * @see #getFontSize()
 	 * @generated
 	 * @ordered
 	 */
-	protected double size = SIZE_EDEFAULT;
+	protected double fontSize = FONT_SIZE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -70,8 +70,8 @@ public class HorizontalLineImpl extends ElementImpl implements HorizontalLine {
 	 * @generated
 	 */
 	@Override
-	public double getSize() {
-		return size;
+	public double getFontSize() {
+		return fontSize;
 	}
 
 	/**
@@ -80,11 +80,11 @@ public class HorizontalLineImpl extends ElementImpl implements HorizontalLine {
 	 * @generated
 	 */
 	@Override
-	public void setSize(double newSize) {
-		double oldSize = size;
-		size = newSize;
+	public void setFontSize(double newFontSize) {
+		double oldFontSize = fontSize;
+		fontSize = newFontSize;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Resume_templatePackage.HORIZONTAL_LINE__SIZE, oldSize, size));
+			eNotify(new ENotificationImpl(this, Notification.SET, Resume_templatePackage.HORIZONTAL_LINE__FONT_SIZE, oldFontSize, fontSize));
 	}
 
 	/**
@@ -95,8 +95,8 @@ public class HorizontalLineImpl extends ElementImpl implements HorizontalLine {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Resume_templatePackage.HORIZONTAL_LINE__SIZE:
-				return getSize();
+			case Resume_templatePackage.HORIZONTAL_LINE__FONT_SIZE:
+				return getFontSize();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -109,8 +109,8 @@ public class HorizontalLineImpl extends ElementImpl implements HorizontalLine {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Resume_templatePackage.HORIZONTAL_LINE__SIZE:
-				setSize((Double)newValue);
+			case Resume_templatePackage.HORIZONTAL_LINE__FONT_SIZE:
+				setFontSize((Double)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -124,8 +124,8 @@ public class HorizontalLineImpl extends ElementImpl implements HorizontalLine {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Resume_templatePackage.HORIZONTAL_LINE__SIZE:
-				setSize(SIZE_EDEFAULT);
+			case Resume_templatePackage.HORIZONTAL_LINE__FONT_SIZE:
+				setFontSize(FONT_SIZE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -139,8 +139,8 @@ public class HorizontalLineImpl extends ElementImpl implements HorizontalLine {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Resume_templatePackage.HORIZONTAL_LINE__SIZE:
-				return size != SIZE_EDEFAULT;
+			case Resume_templatePackage.HORIZONTAL_LINE__FONT_SIZE:
+				return fontSize != FONT_SIZE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -155,8 +155,8 @@ public class HorizontalLineImpl extends ElementImpl implements HorizontalLine {
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (size: ");
-		result.append(size);
+		result.append(" (fontSize: ");
+		result.append(fontSize);
 		result.append(')');
 		return result.toString();
 	}

@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link resume_template.ResumeTemplate#getFolderName <em>Folder Name</em>}</li>
  *   <li>{@link resume_template.ResumeTemplate#getFileName <em>File Name</em>}</li>
  *   <li>{@link resume_template.ResumeTemplate#getDefaultFont <em>Default Font</em>}</li>
- *   <li>{@link resume_template.ResumeTemplate#getDefaultSize <em>Default Size</em>}</li>
+ *   <li>{@link resume_template.ResumeTemplate#getDefaultFontSize <em>Default Font Size</em>}</li>
  *   <li>{@link resume_template.ResumeTemplate#getDefaultTablePadding <em>Default Table Padding</em>}</li>
  *   <li>{@link resume_template.ResumeTemplate#getThemeColors <em>Theme Colors</em>}</li>
  *   <li>{@link resume_template.ResumeTemplate#getElements <em>Elements</em>}</li>
@@ -101,27 +101,27 @@ public interface ResumeTemplate extends EObject {
 	void setDefaultFont(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Default Size</b></em>' attribute.
+	 * Returns the value of the '<em><b>Default Font Size</b></em>' attribute.
 	 * The default value is <code>"11"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Default Size</em>' attribute.
-	 * @see #setDefaultSize(double)
-	 * @see resume_template.Resume_templatePackage#getResumeTemplate_DefaultSize()
+	 * @return the value of the '<em>Default Font Size</em>' attribute.
+	 * @see #setDefaultFontSize(double)
+	 * @see resume_template.Resume_templatePackage#getResumeTemplate_DefaultFontSize()
 	 * @model default="11"
 	 * @generated
 	 */
-	double getDefaultSize();
+	double getDefaultFontSize();
 
 	/**
-	 * Sets the value of the '{@link resume_template.ResumeTemplate#getDefaultSize <em>Default Size</em>}' attribute.
+	 * Sets the value of the '{@link resume_template.ResumeTemplate#getDefaultFontSize <em>Default Font Size</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Default Size</em>' attribute.
-	 * @see #getDefaultSize()
+	 * @param value the new value of the '<em>Default Font Size</em>' attribute.
+	 * @see #getDefaultFontSize()
 	 * @generated
 	 */
-	void setDefaultSize(double value);
+	void setDefaultFontSize(double value);
 
 	/**
 	 * Returns the value of the '<em><b>Default Table Padding</b></em>' attribute.

@@ -1,11 +1,11 @@
-const HAlignment = {
+const hAlignment = {
   'LEFT': DocumentApp.HorizontalAlignment.LEFT,
   'CENTER': DocumentApp.HorizontalAlignment.CENTER,
   'RIGHT': DocumentApp.HorizontalAlignment.RIGHT,
   'JUSTIFY': DocumentApp.HorizontalAlignment.JUSTIFY
 }
 
-const GlyphType = {
+const glyphType = {
   'BULLET': DocumentApp.GlyphType.BULLET,
   'HOLLOW_BULLET': DocumentApp.GlyphType.HOLLOW_BULLET,
   'SQUARE_BULLET': DocumentApp.GlyphType.SQUARE_BULLET,
@@ -141,7 +141,7 @@ function getAttributes(style) {
   // transfer my attributes to Google App Script attributes
   const Attribute = {
     'font': DocumentApp.Attribute.FONT_FAMILY,
-    'size': DocumentApp.Attribute.FONT_SIZE,
+    'fontSize': DocumentApp.Attribute.FONT_SIZE,
     'isBold': DocumentApp.Attribute.BOLD,
     'isItalic': DocumentApp.Attribute.ITALIC,
     'hAlignment': DocumentApp.Attribute.HORIZONTAL_ALIGNMENT,
@@ -158,10 +158,10 @@ function getAttributes(style) {
   var attributes = {};
   // set default values
   attributes[Attribute.font] = defaultFont;
-  attributes[Attribute.size] = defaultSize;
+  attributes[Attribute.fontSize] = defaultFontSize;
   attributes[Attribute.isBold] = null;
   attributes[Attribute.isItalic] = null;
-  attributes[Attribute.hAlignment] = HAlignment.left;
+  attributes[Attribute.hAlignment] = hAlignment.left;
   attributes[Attribute.color] = null;
   attributes[Attribute.bgColor] = null;
   attributes[Attribute.borderWidth] = null;
