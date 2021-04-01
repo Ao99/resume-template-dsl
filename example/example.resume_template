@@ -3,7 +3,7 @@
   <themeColors name="themeColor1" colorCode="#4a99d5"/>
   <themeColors name="themeColor2"/>
   <elements xsi:type="resume_template:Paragraph" text="my name" font="" fontSize="23.0" isUppercase="true" isBold="true" hAlignment="CENTER" color="//@themeColors.0"/>
-  <elements xsi:type="resume_template:Table" elementIdx="1" numRows="1" numCols="3" widthPropCols="3,1,1,1" bgColor="//@themeColors.0">
+  <elements xsi:type="resume_template:Table" elementIdx="1" numRows="1" numCols="3" widthPropCols="[3,1,1,1]" bgColor="//@themeColors.0">
     <cells>
       <textElements xsi:type="resume_template:Paragraph" text="www.my-web-site.com" font="Georgia" color="//@themeColors.1"/>
     </cells>

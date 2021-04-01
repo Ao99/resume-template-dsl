@@ -49,10 +49,10 @@ operation Table hasValidWidthPropCols() : Boolean {
 		return false;
 	}
 	
-	if(not widthPropCols.matches("^([0-9]+,)+([0-9]+)$")) {
+	if(not widthPropCols.matches("^\\[([0-9]+,)+([0-9]+)\\]$")) {
 		("Error in " + self).println();
 		("widthPropCols '" + widthPropCols + "' has an invalid format").println();
-		"A valid format example is '5,1,2,2'".println();
+		"A valid format example is '[5,1,2,2]'".println();
 		"- - - - -".println();
 		return false;
 	}
