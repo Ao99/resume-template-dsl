@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="resume_template">
+  <figures name="Default">
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="TextElementColorFigureTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="TableBgColorFigureTargetDecoration"/>
+    <descriptors name="ThemeColorFigure">
+      <actualFigure xsi:type="gmfgraph:Ellipse" name="ThemeColorFigure">
+        <preferredSize dx="150" dy="30"/>
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="ThemeColorLabelFigure" text="ThemeColor"/>
+      </actualFigure>
+      <accessors accessor="getFigureThemeColorLabelFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="ParagraphFigure">
+      <actualFigure xsi:type="gmfgraph:ScalablePolygon" name="ParagraphFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="ParagraphLabelFigure" text="Paragraph"/>
+        <template/>
+        <template x="90"/>
+        <template x="100" y="10"/>
+        <template x="90" y="10"/>
+        <template x="90"/>
+        <template x="100" y="10"/>
+        <template x="100" y="40"/>
+        <template y="40"/>
+      </actualFigure>
+      <accessors accessor="getFigureParagraphLabelFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="ListFigure">
+      <actualFigure xsi:type="gmfgraph:ScalablePolygon" name="ListFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="ListLabelFigure" text="List"/>
+        <template/>
+        <template x="90"/>
+        <template x="100" y="10"/>
+        <template x="90" y="10"/>
+        <template x="90"/>
+        <template x="100" y="10"/>
+        <template x="100" y="40"/>
+        <template y="40"/>
+        <template y="35"/>
+        <template x="3" y="32"/>
+        <template x="6" y="35"/>
+        <template x="3" y="38"/>
+        <template y="35"/>
+        <template y="25"/>
+        <template x="3" y="22"/>
+        <template x="6" y="25"/>
+        <template x="3" y="28"/>
+        <template y="25"/>
+        <template y="15"/>
+        <template x="3" y="12"/>
+        <template x="6" y="15"/>
+        <template x="3" y="18"/>
+        <template y="15"/>
+      </actualFigure>
+      <accessors accessor="getFigureListLabelFigure" figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="TableFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="TableFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="TableLabelFigure" text="Table">
+          <maximumSize dx="10000" dy="50"/>
+        </children>
+        <children xsi:type="gmfgraph:Rectangle" name="TableCellsCompartmentFigure" outline="false"/>
+      </actualFigure>
+      <accessors accessor="getFigureTableLabelFigure" figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
+      <accessors accessor="getTableCellsCompartmentFigure" figure="//@figures.0/@descriptors.3/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors name="CellFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="CellFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="CellLabelFigure" text="Cell">
+          <maximumSize dx="10000" dy="50"/>
+        </children>
+        <children xsi:type="gmfgraph:Rectangle" name="CellTextElementsCompartmentFigure" outline="false"/>
+      </actualFigure>
+      <accessors accessor="getFigureCellLabelFigure" figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
+      <accessors accessor="getCellTextElementsCompartmentFigure" figure="//@figures.0/@descriptors.4/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors name="HorizontalLineFigure">
+      <actualFigure xsi:type="gmfgraph:ScalablePolygon" name="HorizontalLineFigure">
+        <preferredSize dx="700" dy="5"/>
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="HorizontalLineLabelFigure" text="HorizontalLine"/>
+        <template/>
+        <template x="500"/>
+      </actualFigure>
+      <accessors accessor="getFigureHorizontalLineLabelFigure" figure="//@figures.0/@descriptors.5/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="TextElementColorFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="TextElementColorFigure" lineKind="LINE_DASH" targetDecoration="//@figures.0/@figures.0"/>
+    </descriptors>
+    <descriptors name="TextElementColorExternalLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="TextElementColorExternalLabel"/>
+    </descriptors>
+    <descriptors name="TableBgColorFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="TableBgColorFigure" lineKind="LINE_DASH" targetDecoration="//@figures.0/@figures.1"/>
+    </descriptors>
+    <descriptors name="TableBgColorExternalLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="TableBgColorExternalLabel"/>
+    </descriptors>
+  </figures>
+  <nodes name="ThemeColor" figure="ThemeColorFigure">
+    <facets xsi:type="gmfgraph:DefaultSizeFacet">
+      <defaultSize dx="150" dy="30"/>
+    </facets>
+  </nodes>
+  <nodes name="Paragraph" figure="ParagraphFigure"/>
+  <nodes name="List" figure="ListFigure"/>
+  <nodes name="Table" figure="TableFigure"/>
+  <nodes name="Cell" figure="CellFigure"/>
+  <nodes name="HorizontalLine" figure="HorizontalLineFigure">
+    <facets xsi:type="gmfgraph:DefaultSizeFacet">
+      <defaultSize dx="700" dy="5"/>
+    </facets>
+  </nodes>
+  <connections name="TextElementColor" figure="TextElementColorFigure"/>
+  <connections name="TableBgColor" figure="TableBgColorFigure"/>
+  <compartments name="TableCellsCompartment" figure="TableFigure" collapsible="true" accessor="//@figures.0/@descriptors.3/@accessors.1"/>
+  <compartments name="CellTextElementsCompartment" figure="CellFigure" collapsible="true" accessor="//@figures.0/@descriptors.4/@accessors.1"/>
+  <labels name="ThemeColorLabel" figure="ThemeColorFigure" accessor="//@figures.0/@descriptors.0/@accessors.0"/>
+  <labels name="ParagraphLabel" figure="ParagraphFigure" accessor="//@figures.0/@descriptors.1/@accessors.0"/>
+  <labels name="ListLabel" figure="ListFigure" accessor="//@figures.0/@descriptors.2/@accessors.0"/>
+  <labels name="TableLabel" figure="TableFigure" accessor="//@figures.0/@descriptors.3/@accessors.0"/>
+  <labels name="CellLabel" figure="CellFigure" accessor="//@figures.0/@descriptors.4/@accessors.0"/>
+  <labels name="HorizontalLineLabel" figure="HorizontalLineFigure" accessor="//@figures.0/@descriptors.5/@accessors.0"/>
+  <labels name="TextElementColorExternalLabel" figure="TextElementColorExternalLabelFigure" elementIcon="false"/>
+  <labels name="TableBgColorExternalLabel" figure="TableBgColorExternalLabelFigure" elementIcon="false"/>
+</gmfgraph:Canvas>
