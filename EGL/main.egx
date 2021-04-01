@@ -1,0 +1,15 @@
+import 'util.eol';
+
+rule PrepareLorem {
+	
+	template : "prepareLorem.egl"
+	
+	target : "./output/Lorem.gs"
+}
+
+rule PrepareUtils {
+	
+	template : "prepareUtils.egl"
+	
+	target : "./output/Utils.gs"
+}
