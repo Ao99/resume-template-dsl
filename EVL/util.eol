@@ -9,7 +9,7 @@ operation Collection hasUniqueIndexes(parent : EObject, itemType : String) : Boo
 		switch(itemType) {
 			case "element" : idx = item.elementIdx;
 			case "cell" : idx = "(" + item.rowIdx + "," + item.colIdx + ")";
-			default : break;
+			default : continue;
 		}
 		var sequence;
 		if(idxMap.containsKey(idx)) {
