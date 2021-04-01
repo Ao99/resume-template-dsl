@@ -1,4 +1,4 @@
-import "resume-template.eol";
+import "validation.eol";
 
 pre {
 }
