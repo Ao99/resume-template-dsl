@@ -1,10 +1,12 @@
 import 'util.eol';
 
-rule PrepareLorem {
+rule Model2Code
+
+	transform resumeTemplate : ResumeTemplate {
 	
-	template : "prepareLorem.egl"
+	template : "model2code.egl"
 	
-	target : "./output/Lorem.gs"
+	target : "./output/Main.gs"
 }
 
 rule PrepareUtils {
@@ -12,4 +14,11 @@ rule PrepareUtils {
 	template : "prepareUtils.egl"
 	
 	target : "./output/Utils.gs"
+}
+
+rule PrepareLorem {
+	
+	template : "prepareLorem.egl"
+	
+	target : "./output/Lorem.gs"
 }
