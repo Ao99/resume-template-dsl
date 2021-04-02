@@ -8,17 +8,3 @@ rule Model2Code
 	
 	target : "./output/Main.gs"
 }
-
-rule PrepareUtils {
-	
-	template : "prepareUtils.egl"
-	
-	target : "./output/Utils.gs"
-}
-
-rule PrepareLorem {
-	
-	template : "prepareLorem.egl"
-	
-	target : "./output/Lorem.gs"
-}
