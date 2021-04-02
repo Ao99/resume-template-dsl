@@ -105,7 +105,7 @@
     </children>
     <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_MoVjMZM-EeuM8ZQLZeFg7g"/>
     <element xmi:type="resume_template:RepeatContainer" href="example.resume_template#//@elements.7"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MoVjMpM-EeuM8ZQLZeFg7g" x="-96" y="648" width="745" height="241"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MoVjMpM-EeuM8ZQLZeFg7g" x="-96" y="648" width="793" height="241"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_KOvjs5NAEeuUuMC80TZ0WQ" type="2001" fontName="Segoe UI">
     <children xmi:type="notation:DecorationNode" xmi:id="_KOvjtZNAEeuUuMC80TZ0WQ" type="5001"/>
