@@ -1,4 +1,4 @@
-// this method is called from 3 different parent Object:
+// this method is called from 4 different parent Object:
 // ResumeTemplate, Cell, and Table
 operation Collection hasUniqueIndexes(parent : EObject, itemType : String) : Boolean {
 	var isValid = true;
@@ -84,23 +84,27 @@ operation Table hasValidCells() : Boolean {
 	var numCols = self.numCols;
 	var isValid = true;
 	
-	if(cells.size() != numRows * numCols) {
-		("Error in " + self).println();
-		((numRows * numCols) + " cells are expected but " + cells.size() + " ones are found").println();
-		"- - - - -".println();
-		isValid = false;
-	}
-	
-	// cells shouldn't have indexes out of bounds
-	for(c in cells) {
-		if(c.rowIdx < 0 or c.rowIdx > numRows - 1 or c.colIdx < 0 or c.colIdx > numCols - 1) {
+	if(numRows >0 or numCols <= 0) {
+		// correct count of cells
+		if(cells.size() != numRows * numCols) {
 			("Error in " + self).println();
-			("Found cell with indexes out the bounds of a " + numRows + "x" + numCols + " table:").println();
-			c.println();
+			((numRows * numCols) + " cells are expected but " + cells.size() + " ones are found").println();
 			"- - - - -".println();
 			isValid = false;
 		}
+		
+		// cells shouldn't have indexes out of bounds
+		for(c in cells) {
+			if(c.rowIdx < 0 or c.rowIdx > numRows - 1 or c.colIdx < 0 or c.colIdx > numCols - 1) {
+				("Error in " + self).println();
+				("Found cell with indexes out the bounds of a " + numRows + "x" + numCols + " table:").println();
+				c.println();
+				"- - - - -".println();
+				isValid = false;
+			}
+		}
 	}
+	
 	
 	// cells shouldn't have duplicated indexes
 	isValid = cells.hasUniqueIndexes(self, "cell");
