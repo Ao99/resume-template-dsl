@@ -12,23 +12,25 @@ function main() {
   var doc = createFolderAndFile();
   var body = doc.getBody();
 
-[%for(e in resumeTemplate.elements.sortBy(e : Element | e.elementIdx)) {%]
-[%=e.getElementCode(1, "body")%]
-[%}%]
+[%for(e in resumeTemplate.elements.sortBy(e : Element | e.elementIdx)) {
+	e.getElementCode(1, "body");
+}%]
   clearEmptyLines(body);
 }
 [%
 // This function is recursive, so nested 'for' loop can be created if needed
-operation Element getElementCode(numIndents : Integer, parent : String) : String {
+operation Element getElementCode(level : Integer, parent : String) : String {
 	var type = self.type().name;
-	var indents = numIndents.getIndents();
+	var indents = level.getIndents();
 	
-	if(type == "RepeatContainer") { %]
-[%=indents%]for(var i=0; i<[%=self.repeatTimes%]; i++) {
+	if(type == "RepeatContainer") {
+		var loopIdx = "i" + level; %]
+[%=indents%]for(var [%=loopIdx%]=0; [%=loopIdx%]<[%=self.repeatTimes%]; [%=loopIdx%]++) {
 [%		for(e in self.elements) {
-			e.getElementCode(numIndents+1, parent);
+			e.getElementCode(level+1, parent);
 		} %]
 [%=indents%]}
+
 [%	} else {%]
 [%=indents%]// [%=type.firstToLowerCase()%]
 [%=indents%][%if(type == "Table"){%]var table = [%}%]create[%=type%]([%=parent%], {
@@ -62,7 +64,7 @@ operation Element getElementCode(numIndents : Integer, parent : String) : String
 				var value = attributes.get(key);
 				var feature = self.eClass().getEStructuralFeature(key);
 				var attr = self.eGet(feature);
-				var indents = (numIndents+1).getIndents();
+				var indents = (level+1).getIndents();
 				
 				switch(value) {
 					case String:
@@ -90,14 +92,14 @@ operation Element getElementCode(numIndents : Integer, parent : String) : String
 			}
 		} %]
 [%=indents%]});
+
 [%		
 		if(type == "Table") {
 			var cells = self.cells.asSequence().sortBy(c : Cell | c.rowIdx * 100 + c.colIdx);
 			for(c in cells) { %]
-
 [%=indents%]// table cell ([%=c.rowIdx%],[%=c.colIdx%])
 [%				for(e in c.textElements.sortBy(e : Element | e.elementIdx)) {
-					e.getElementCode(numIndents, "table.getRow(%s).getCell(%s)".format(Sequence{c.rowIdx,c.colIdx}));
+					e.getElementCode(level, "table.getRow(%s).getCell(%s)".format(Sequence{c.rowIdx,c.colIdx}));
 				}
 			}
 		}
