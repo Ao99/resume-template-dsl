@@ -81,11 +81,11 @@ operation Table hasValidCells() : Boolean {
 	var numCols = self.numCols;
 	var isValid = true;
 	
-	if(numRows >0 or numCols <= 0) {
+	if(numRows > 0 and numCols > 0) {
 		// correct count of cells
-		if(cells.size() != numRows * numCols) {
+		if(cells.size() > numRows * numCols) {
 			"Error in %s".format(Sequence{self}).println();
-			"%s cells are expected but %s ones are found".format(Sequence{numRows * numCols,cells.size()}).println();
+			"At most %s cells are expected but %s ones are found".format(Sequence{numRows * numCols,cells.size()}).println();
 			"- - - - -".println();
 			isValid = false;
 		}
