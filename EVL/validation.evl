@@ -38,7 +38,7 @@ context ResumeTemplate {
 	
 	// the indexes of the elements should not contain duplicates
 	constraint HasUniqueElementIndexes {
-		check : self.elements.hasUniqueIndexes(self, "element")
+		check : self.elements.hasUniqueIndexes(self)
 		message : "Found duplicated element indexes in ResumeTemplate, see details in console"
 	}
 }
@@ -70,7 +70,7 @@ context RepeatContainer {
 	
 	// the indexes of the elements should not contain duplicates
 	constraint HasUniqueElementIndexes {
-		check : self.elements.hasUniqueIndexes(self, "element")
+		check : self.elements.hasUniqueIndexes(self)
 		message : "Found duplicated element indexes in RepeatContainer, see details in console"
 	}
 }
@@ -149,7 +149,7 @@ context Table {
 context Cell {
 	// the indexes of the elements should not contain duplicates
 	constraint HasUniqueElementIndexes {
-		check : self.textElements.hasUniqueIndexes(self, "element")
+		check : self.textElements.hasUniqueIndexes(self)
 		message : "Found duplicated element indexes in Cell, see details in console"
 	}
 }

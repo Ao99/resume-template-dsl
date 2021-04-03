@@ -1,16 +1,12 @@
 // this method is called from 4 different parent Object:
-// ResumeTemplate, Cell, and Table
-operation Collection hasUniqueIndexes(parent : EObject, itemType : String) : Boolean {
+// ResumeTemplate, RepeatContainer, Cell, and Table
+operation Collection hasUniqueIndexes(parent : EObject, test : String) : Boolean {
 	var isValid = true;
-
+	var isCell = parent.type().name == "Table";
+	
 	var idxMap = new Map;
 	for(item in self) {
-		var idx;
-		switch(itemType) {
-			case "element" : idx = item.elementIdx;
-			case "cell" : idx = "(" + item.rowIdx + "," + item.colIdx + ")";
-			default : continue;
-		}
+		var idx = isCell ? "(%s,%s)".format(Sequence{item.rowIdx,item.colIdx}) : item.elementIdx;
 		var sequence;
 		if(idxMap.containsKey(idx)) {
 			sequence = idxMap.get(idx);
@@ -23,7 +19,8 @@ operation Collection hasUniqueIndexes(parent : EObject, itemType : String) : Boo
 	}
 	
 	if(not isValid) {
-		("Error in " + parent).println();
+		var itemType = isCell ? "cell" : "element";
+		"Error in %s".format(Sequence{parent}).println();
 		("Found " + itemType + "s with duplicated indexes:").println();
 		for(idx in idxMap.keySet()) {
 			var sequence = idxMap.get(idx);
@@ -43,14 +40,14 @@ operation Table hasValidWidthPropCols() : Boolean {
 	var isValid = true;
 	
 	if(not widthPropCols.isDefined()) {
-		("Error in " + self).println();
+		"Error in %s".format(Sequence{self}).println();
 		("widthPropCols is not defined").println();
 		"- - - - -".println();
 		return false;
 	}
 	
 	if(not widthPropCols.matches("^\\[([0-9]+,)+([0-9]+)\\]$")) {
-		("Error in " + self).println();
+		"Error in %s".format(Sequence{self}).println();
 		("widthPropCols '" + widthPropCols + "' has an invalid format").println();
 		"A valid format example is '[5,1,2,2]'".println();
 		"- - - - -".println();
@@ -59,7 +56,7 @@ operation Table hasValidWidthPropCols() : Boolean {
 	
 	var widthArr = widthPropCols.split(",");
 	if(widthArr.size() != numCols + 1) {
-		("Error in " + self).println();
+		"Error in %s".format(Sequence{self}).println();
 		("widthPropCols '" + widthPropCols + "' has wrong count of numbers").println();
 		("The count of numbers should equal to " + (numCols + 1)).println();
 		"- - - - -".println();
@@ -68,7 +65,7 @@ operation Table hasValidWidthPropCols() : Boolean {
 	
 	for(num in widthArr) {
 		if(num.characterAt(0) == '0') {
-			("Error in " + self).println();
+			"Error in %s".format(Sequence{self}).println();
 			("The number '" + num + "' shouldn't start with '0'").println();
 			"- - - - -".println();
 			isValid = false;
@@ -87,8 +84,8 @@ operation Table hasValidCells() : Boolean {
 	if(numRows >0 or numCols <= 0) {
 		// correct count of cells
 		if(cells.size() != numRows * numCols) {
-			("Error in " + self).println();
-			((numRows * numCols) + " cells are expected but " + cells.size() + " ones are found").println();
+			"Error in %s".format(Sequence{self}).println();
+			"%s cells are expected but %s ones are found".format(Sequence{numRows * numCols,cells.size()}).println();
 			"- - - - -".println();
 			isValid = false;
 		}
@@ -96,8 +93,8 @@ operation Table hasValidCells() : Boolean {
 		// cells shouldn't have indexes out of bounds
 		for(c in cells) {
 			if(c.rowIdx < 0 or c.rowIdx > numRows - 1 or c.colIdx < 0 or c.colIdx > numCols - 1) {
-				("Error in " + self).println();
-				("Found cell with indexes out the bounds of a " + numRows + "x" + numCols + " table:").println();
+				"Error in %s".format(Sequence{self}).println();
+				"Found cell with indexes out the bounds of a %sx%s table:".format(Sequence{numRows,numCols}).println();
 				c.println();
 				"- - - - -".println();
 				isValid = false;
@@ -110,4 +107,17 @@ operation Table hasValidCells() : Boolean {
 	isValid = cells.hasUniqueIndexes(self, "cell");
 	
 	return isValid;
+}
+
+operation String format(params : Sequence) : String {
+	var selfArray = self.split("%s");
+	var results = "";
+	
+	var idx = 0;
+	for(str in selfArray) {
+		results += str;
+		if(idx < params.size()) results += params.get(idx);
+		idx++;
+	}
+	return results;
 }
