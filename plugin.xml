@@ -12,5 +12,24 @@
             uri="resume_template"
             class="resume_template.Resume_templatePackage"/>
    </extension>
+   <extension
+         point="org.eclipse.epsilon.evl.emf.validation">
+      <constraintsBinding
+            compose="true"
+            constraints="EVL/validation.evl"
+            namespaceURI="resume_template">
+      </constraintsBinding>
+   </extension>
+   <extension
+         point="org.eclipse.ui.ide.markerResolution">
+      <Generic>
+         class : org.eclipse.epsilon.evl.emf.validation.EvlMarkerResolutionGenerator
+markerType : org.eclipse.epsilon.eugenia.examples.filesystem.diagram.diagnostic
+      </Generic>
+      <Generic>
+         class : org.eclipse.epsilon.evl.emf.validation.EvlMarkerResolutionGenerator
+markerType : org.eclipse.emf.ecore.diagnostic
+      </Generic>
+   </extension>
 
 </plugin>
