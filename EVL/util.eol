@@ -1,6 +1,6 @@
 // this method is called from 4 different parent Object:
 // ResumeTemplate, RepeatContainer, Cell, and Table
-operation Collection hasUniqueIndexes(parent : EObject, test : String) : Boolean {
+operation Collection hasUniqueIndexes(parent : EObject) : Boolean {
 	var isValid = true;
 	var isCell = parent.type().name == "Table";
 	
@@ -104,7 +104,7 @@ operation Table hasValidCells() : Boolean {
 	
 	
 	// cells shouldn't have duplicated indexes
-	isValid = cells.hasUniqueIndexes(self, "cell");
+	isValid = cells.hasUniqueIndexes(self);
 	
 	return isValid;
 }
